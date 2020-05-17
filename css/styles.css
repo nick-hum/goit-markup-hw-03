@@ -15,11 +15,21 @@ body {
   letter-spacing: 0.03em;
 }
 
+.container {
+  width: 1230px;
+  margin: 0 auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
 .list {
   list-style: none;
+  padding: 0px;
+  margin: 0px;
 }
 
 .logo {
+  margin-right: 86px;
   color: var(--title-text-color);
   text-decoration: none;
   font-family: Raleway, sans-serif;
@@ -32,15 +42,40 @@ body {
   color: var(--accent-color);
 }
 
+.logo-studio {
+  color: #ffffff;
+}
+
 /* site navigation */
 
+.main-nav {
+  display: flex;
+  align-items: center;
+}
+
+.site-nav {
+  display: flex;
+}
+
 .site-nav .link {
+  display: block;
+  padding-top: 32px;
+  padding-bottom: 32px;
+
   color: var(--title-text-color);
   text-decoration: none;
   font-weight: 500;
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.02em;
+}
+
+.site-nav .item + .item {
+  margin-left: 50px;
+}
+
+.site-nav .list {
+  padding-left: 0px;
 }
 
 .site-nav .link:hover,
@@ -50,6 +85,14 @@ body {
 
 .site-nav .link.current {
   color: var(--accent-color);
+}
+
+.nav-contacts {
+  margin-left: auto;
+}
+
+.address-text:not(:last-child) {
+  margin-right: 30px;
 }
 
 .address-text {
@@ -69,22 +112,30 @@ body {
 
 /* hero */
 .hero {
-  background-color: #e5e5e5;
   color: #ffffff;
+  text-align: center;
 }
 
 .hero .hero-title {
+  margin-top: 0px;
+  margin-bottom: 46px;
+
+  background-color: #e5e5e5;
   font-weight: 900;
   font-size: 44px;
   line-height: 1.36;
-  text-align: center;
   letter-spacing: 0.06em;
   text-transform: uppercase;
 }
 
 .hero .hero-service {
+  display: inline-block;
+  padding: 10px 32px;
+  min-width: 200px;
+
   color: #ffffff;
   background-color: var(--accent-color);
+  border-radius: 4px;
   text-decoration: none;
   font-weight: 700;
   font-size: 16px;
@@ -95,13 +146,30 @@ body {
 /* main content  */
 
 .section-title {
+  margin-top: 0px;
+  margin-bottom: 50px;
   color: var(--title-text-color);
   font-size: 36px;
   line-height: 1.16;
   text-align: center;
 }
 
+.section {
+  padding-top: 94px;
+}
+
+.list.advantages {
+  display: flex;
+  background-color: #e5e5e5;
+}
+
+.adv-item:not(:last-child) {
+  margin-right: 29px;
+}
+
 .advantages .advantages-list {
+  margin-top: 30px;
+  margin-bottom: 10px;
   color: var(--title-text-color);
   font-size: 14px;
   line-height: 1.14;
@@ -109,11 +177,27 @@ body {
 }
 
 .advantages-text {
+  margin-top: 0px;
+  margin-bottom: 0px;
   font-size: 14px;
   line-height: 1.71;
 }
 
+.list.products {
+  display: flex;
+}
+
+.product-item:not(:last-child) {
+  margin-right: 30px;
+}
+
+.section.sale {
+  padding-bottom: 94px;
+}
+
 .section .section-products {
+  margin-top: 0px;
+  margin-bottom: 0px;
   color: #ffffff;
   font-size: 14px;
   line-height: 1.14;
@@ -125,7 +209,21 @@ body {
   text-decoration: none;
 }
 
+.section.team {
+  background-color: #f5f4fa;
+}
+
+.list.members {
+  display: flex;
+}
+
+.team-item:not(:last-child) {
+  margin-right: 30px;
+}
+
 .section .team-member {
+  margin-top: 30px;
+  margin-bottom: 10px;
   color: var(--title-text-color);
   font-weight: 500;
   font-size: 16px;
@@ -133,17 +231,68 @@ body {
 }
 
 .job-type {
+  margin-top: 0px;
+  margin-bottom: 28px;
   font-size: 16px;
   line-height: 1.18;
+}
+
+.social-links {
+  display: flex;
+}
+
+.social-item:not(:last-child) {
+  margin-right: 39px;
+}
+
+.section.clients {
+  padding-bottom: 94px;
+}
+
+.list.permanent {
+  display: flex;
+}
+
+.client-item:not(:last-child) {
+  margin-right: 160px;
 }
 
 /* footer */
 
 .footer {
-  background-color: #e5e5e5;
+  background-color: #2f303a;
+  padding-top: 48px;
+}
+
+.last {
+  display: flex;
+  /* justify-content: space-around; */
+  /* align-items: center; */
+}
+.list.footer-links {
+  display: flex;
+}
+
+.join-item:not(:last-child) {
+  margin-right: 17px;
+}
+
+.logo.lower {
+  display: block;
+  margin-bottom: 10px;
+  margin-right: 0px;
+}
+
+.first-footer {
+  margin-right: 179px;
+}
+
+.second-footer {
+  margin-right: 164px;
 }
 
 .address-footer {
+  display: inline-block;
   color: rgba(255, 255, 255, 0.6);
   font-size: 14px;
   font-style: normal;
@@ -151,7 +300,13 @@ body {
   text-decoration: none;
 }
 
+.address-footer.mail {
+  margin-bottom: 9px;
+}
+
 .address-street {
+  margin-top: 0px;
+  margin-bottom: 9px;
   color: #ffffff;
   font-size: 14px;
   font-style: normal;
@@ -159,6 +314,8 @@ body {
 }
 
 .join {
+  margin-bottom: 21px;
+  margin-top: 0px;
   color: #ffffff;
   font-size: 14px;
   font-weight: 700;
@@ -167,9 +324,12 @@ body {
 }
 
 .developers {
+  margin-bottom: 0px;
+  margin-top: 46px;
   color: rgba(255, 255, 255, 0.4);
   font-size: 12px;
   line-height: 2;
+  text-align: center;
 }
 /* styles for portfolio.html */
 
